@@ -33,10 +33,10 @@ Both networks share identical backbone architecture. The student is updated aggr
 The key trick preventing collapse is a centering and sharpening tradeoff applied to the teacher's outputs:
 
 - **Centering** c pulls the teacher's output towards a uniform distribution, preventing it from collapsing to a single dominant dimension. It's tracked via a running EMA over batch statistics — no learned parameters.
-$$c \leftarrow \lambda \times c \; + \; (1 - \lambda) \times \frac{1}{B} \sum_{i=1}^{B} g_{t}(x_{i})$$
+$$c \leftarrow \lambda \times c + (1 - \lambda) \times \frac{1}{B} \sum_{i=1}^{B} g_{t}(x_{i})$$
 
 - **Sharpening** via temperature $\tau$ scaling pulls the outputs towards a peaky distribution, giving the student a crisp, confident target to chase. A lower teacher temperature = sharper distribution = stronger learning signal.
-$$softmax(\frac{g_t(x_{i})}{\tau})$$
+$$softmax\left( \frac{g_t(x_{i})}{\tau} \right)$$
 
 They are in a constant tug of war where centering prevents overconfidence, sharpening prevents laziness. Together they keep training stable without any labels or contrastive pairs.
 
