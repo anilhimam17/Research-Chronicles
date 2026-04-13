@@ -47,7 +47,7 @@ $$f(v) = [\sin(2\pi Bv), \cos(2\pi Bv)]$$
 
 ### Mask Decoder
 
-The mask decoder is SAM's core contribution. It is a modified transformer decoder with **bidirectional attention** making two passes of cross-attention in both directions (prompt-to-image and image-to-prompt) interleaved with self-attention across all tokens. This lets the prompt tokens query spatial regions of the image embedding (where ?) while the image embedding simultaneously updates based on the prompt context (what ?).
+The mask decoder is SAM's core contribution. It is a modified transformer decoder with **bidirectional attention** making two passes of cross-attention in both directions (prompt-to-image and image-to-prompt) interleaved with self-attention across all tokens. This lets the prompt tokens query spatial regions of the image embedding (what ?) while the image embedding simultaneously updates based on the prompt context (where ?).
 
 Before entering the decoder, a **learned `<output>` token** is prepended to the prompt sequence. Its sole purpose is to aggregate all attention-driven interactions across both passes and produce the final logits. The output token's final state is passed to a lightweight MLP and then to the mask prediction head.
 
@@ -102,7 +102,7 @@ SAM was trained on promptable segmentation. At inference time, via prompt engine
 - **Instance segmentation** — combine with an off-the-shelf detector as the box prompter
 - **Text-to-mask** — proof-of-concept using CLIP image→text embedding alignment
 
-This composability cemeents SAM as a reliable segmentation interface that other models can prompt — is its most lasting contribution. Much like CLIP enabled DALL-E, SAM enables any system that needs to go from "where should I look" to "here is the precise region."
+This composability cements SAM as a reliable segmentation interface that other models can prompt — is its most lasting contribution. Much like CLIP enabled DALL-E, SAM enables any system that needs to go from "where should I look" to "here is the precise region."
 
 ---
 
