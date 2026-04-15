@@ -30,7 +30,7 @@ The broader aim: specialise in **CV and multimodal AI**, with a longer horizon t
 
 | Paper | Notes | Annotated PDF | Status |
 |---|---|---|---|
-| SAM — Segment Anything | [SAM.md](./SAM.md) | — | 🔜 Up Next |
+| SAM — Segment Anything | [SAM.md](./SAM.md) | [PDF](https://drive.google.com/file/d/1yNiL3bdRW2va_h2EiVQgv9J3LYZMXIci/view?usp=sharing) | ✅ Done |
 | Grounding DINO | [GroundingDINO.md](./GroundingDINO.md) | — | ⏳ Queued |
 | DETR — End-to-End Object Detection with Transformers | [DETR.md](./DETR.md) | — | ⏳ Queued |
 
@@ -38,7 +38,7 @@ The broader aim: specialise in **CV and multimodal AI**, with a longer horizon t
 
 | Paper | Notes | Annotated PDF | Status |
 |---|---|---|---|
-| CLIP — Learning Transferable Visual Models from Natural Language | [CLIP.md](./CLIP.md) | — | ⏳ Queued |
+| CLIP — Learning Transferable Visual Models from Natural Language | [CLIP.md](./CLIP.md) | [PDF](https://drive.google.com/file/d/1N51JLIitDam4qNPLqiHJ7jJI1TU42N-V/view?usp=sharing) | ✅ Done |
 | BLIP-2 | [BLIP2.md](./BLIP2.md) | — | ⏳ Queued |
 
 ---
